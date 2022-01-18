@@ -1,0 +1,312 @@
+{% load static %}
+
+{% block extrahead %}
+<script>window.CKEDITOR_BASEPATH = '/static/ckeditor/ckeditor/';</script>
+{{ block.super }}
+{% endblock %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>DEV Community 👩‍💻👨‍💻</title>
+    <meta name="last-updated" content="2022-01-18 07:43:15 UTC">
+    <meta name="user-signed-in" content="false">
+    <meta name="head-cached-at" content="1642491795">
+    <!-- Experimental web monetization payment pointer for micropayments -->
+    <!-- It lets readers make micropayments to websites they visit. -->
+    <!-- This is step 1: Get live in production to test for platform-wide payment pointer. -->
+    <!-- Step 2: Allow authors to set their payment pointer so they can directly monetize their content based on visitors. -->
+    <!-- Step 3: Enable further functionality based on what we learn from this experimentation and how the ecosystem evolves. -->
+    <meta name="monetization" content="$ilp.uphold.com/24HhrUGG7ekn">
+    <meta name="environment" content="production">
+    <link rel="stylesheet" media="all"
+        href="https://dev.to/assets/minimal-034be83dc8c7693105cf8f4b7d8c31394906782f412c87f08c244a28e4b0d31d.css"
+        id="main-minimal-stylesheet" />
+    <link rel="stylesheet" media="all"
+        href="https://dev.to/assets/views-70672b7e4729b21484a6403dec2b5727eb629b652ca0548bc482d0e435f1164b.css"
+        id="main-views-stylesheet" />
+    <link rel="stylesheet" media="all"
+        href="https://dev.to/assets/crayons-a8f22bb524303bc9a8582f84e79cc46c51e29feeec944b099c9e3917008d3d93.css"
+        id="main-crayons-stylesheet" />
+
+    <script src="https://dev.to/assets/base-6eb34523fb02d506db9b150366e218c7d2b317ac6be131ccddf3284abef9c753.js"
+        defer="defer"></script>
+    <script src="https://dev.to/packs/js/runtime~base-c9b694714c63a3d6d5cf.js" defer="defer"></script>
+    <script src="https://dev.to/packs/js/base-1b63866098f09b74483d.chunk.js" defer="defer"></script>
+    <script src="https://dev.to/packs/js/runtime~Search-6ece956a22f1c9859595.js" defer="defer"></script>
+    <script src="https://dev.to/packs/js/0-9a2ffd9208e8aa1b5804.chunk.js" defer="defer"></script>
+    <script src="https://dev.to/packs/js/2-f808a7720d5e8fef8a35.chunk.js" defer="defer"></script>
+    <script src="https://dev.to/packs/js/Search-d990bc7966d255808aba.chunk.js" defer="defer"></script>
+    <script src="https://dev.to/packs/js/runtime~runtimeBanner-4f40410af0165c89a1a3.js" defer="defer"></script>
+    <script src="https://dev.to/packs/js/1-41d763aca618b31338ba.chunk.js" defer="defer"></script>
+    <script src="https://dev.to/packs/js/runtimeBanner-621040a7370087079e49.chunk.js" defer="defer"></script>
+
+
+    <link rel="canonical" href="https://dev.to/" />
+    <meta name="description"
+        content="A constructive and inclusive social network for software developers. With you every step of your journey.">
+    <meta name="keywords" content="software development, engineering, rails, javascript, ruby">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dev.to/" />
+    <meta property="og:title" content="DEV Community" />
+    <meta property="og:image" content="https://thepracticaldev.s3.amazonaws.com/i/6hqmcjaxbgbon8ydw93z.png">
+    <meta property="og:description"
+        content="A constructive and inclusive social network for software developers. With you every step of your journey." />
+    <meta property="og:site_name" content="DEV Community" />
+
+    <meta name="twitter:site" content="@thepracticaldev">
+    <meta name="twitter:title" content="DEV Community">
+    <meta name="twitter:description"
+        content="A constructive and inclusive social network for software developers. With you every step of your journey.">
+    <meta name="twitter:image:src" content="https://thepracticaldev.s3.amazonaws.com/i/6hqmcjaxbgbon8ydw93z.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="DEV Community RSS Feed" href="https://dev.to/feed" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://res.cloudinary.com/practicaldev/image/fetch/s--E8ak4Hr1--/c_limit,f_auto,fl_progressive,q_auto,w_32/https://dev-to.s3.us-east-2.amazonaws.com/favicon.ico" />
+    <link rel="apple-touch-icon"
+        href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+    <link rel="apple-touch-icon" sizes="152x152"
+        href="https://res.cloudinary.com/practicaldev/image/fetch/s--l0c3Kmql--/c_limit,f_png,fl_progressive,q_80,w_152/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+    <link rel="apple-touch-icon" sizes="167x167"
+        href="https://res.cloudinary.com/practicaldev/image/fetch/s--2ecYCSjC--/c_limit,f_png,fl_progressive,q_80,w_167/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+    <link
+        href="https://res.cloudinary.com/practicaldev/image/fetch/s--t7tVouP9--/c_limit,f_png,fl_progressive,q_80,w_192/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png"
+        rel="icon" sizes="192x192" />
+    <link
+        href="https://res.cloudinary.com/practicaldev/image/fetch/s--lrmEcD2H--/c_limit,f_png,fl_progressive,q_80,w_128/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png"
+        rel="icon" sizes="128x128" />
+    <meta name="apple-mobile-web-app-title" content="dev.to">
+    <meta name="application-name" content="dev.to">
+    <meta name="theme-color" content="#000000" />
+    <link rel="search" href="https://dev.to/open-search.xml" type="application/opensearchdescription+xml"
+        title="DEV Community" />
+
+    <meta property="forem:name" content="DEV Community" />
+    <meta property="forem:logo"
+        content="https://res.cloudinary.com/practicaldev/image/fetch/s--PFPhV65b--/c_limit,f_png,fl_progressive,q_80,w_512/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" />
+    <meta property="forem:domain" content="dev.to" />
+</head>
+<!-- adding the Feature Flag status to the top bar is temporary to show the logo from the correct place,
+      it will be removed by latest 24/10/2021 -->
+
+<body data-user-status="logged-out" data-community-name="DEV Community" class="sans-serif-article-body default-header"
+      data-locale="en" data-honeybadger-key="a45862f6" data-deployed-at="2022-01-17T13:20:54Z"
+      data-latest-commit-id="74c153723b19e9661d42eddf400961e3a1b32954" data-ga-tracking="UA-71991109-1">
+<link rel="stylesheet" media="all"
+      href="https://dev.to/assets/minimal-034be83dc8c7693105cf8f4b7d8c31394906782f412c87f08c244a28e4b0d31d.css"
+      id="secondary-minimal-stylesheet"/>
+<link rel="stylesheet" media="all"
+      href="https://dev.to/assets/views-70672b7e4729b21484a6403dec2b5727eb629b652ca0548bc482d0e435f1164b.css"
+      id="secondary-views-stylesheet"/>
+<link rel="stylesheet" media="all"
+      href="https://dev.to/assets/crayons-a8f22bb524303bc9a8582f84e79cc46c51e29feeec944b099c9e3917008d3d93.css"
+      id="secondary-crayons-stylesheet"/>
+
+<div id="body-styles">
+    <style>
+            :root {
+                --accent-brand: #3b49df;
+                --accent-brand-darker: #323ebe;
+                --accent-brand-lighter: #4150f5;
+                --accent-brand-a10: rgba(59, 73, 223, 0.10);
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</div>
+<div id="audiocontent" data-podcast="">
+
+</div>
+<div class="navigation-progress" id="navigation-progress"></div>
+<header class="crayons-header print-hidden">
+    <span id="route-change-target" tabindex="-1"></span>
+    <a href="#main-content" class="skip-content-link">Skip to content</a>
+    <div class="crayons-header__container">
+            <span class="inline-block m:hidden ">
+                <button class="c-btn c-btn--icon-alone js-hamburger-trigger mx-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
+                         aria-labelledby="a6k1du9t1syg8ago86c7zwvx8rkumcbl" class="crayons-icon">
+                        <title id="a6k1du9t1syg8ago86c7zwvx8rkumcbl">Navigation menu</title>
+                        <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+                    </svg>
+
+                </button>
+            </span>
+        <a href="{% url 'index' %}" class="site-logo" aria-label="DEV Community Home">
+            <svg width="50" height="40" viewBox="0 0 50 40" fill="none">
+                <rect width="50" height="40" rx="3" style="fill: currentColor;"/>
+                <path
+                        d="M19.099 23.508c0 1.31-.423 2.388-1.27 3.234-.838.839-1.942 1.258-3.312 1.258h-4.403V12.277h4.492c1.31 0 2.385.423 3.224 1.27.846.838 1.269 1.912 1.269 3.223v6.738zm-2.808 0V16.77c0-.562-.187-.981-.562-1.258-.374-.285-.748-.427-1.122-.427h-1.685v10.107h1.684c.375 0 .75-.138 1.123-.415.375-.285.562-.708.562-1.27zM28.185 28h-5.896c-.562 0-1.03-.187-1.404-.561-.375-.375-.562-.843-.562-1.404V14.243c0-.562.187-1.03.562-1.404.374-.375.842-.562 1.404-.562h5.896v2.808H23.13v3.65h3.088v2.808h-3.088v3.65h5.054V28zm7.12 0c-.936 0-1.684-.655-2.246-1.965l-3.65-13.758h3.089l2.807 10.804 2.808-10.804H41.2l-3.65 13.758C36.99 27.345 36.241 28 35.305 28z"
+                        style="fill: var(--base-inverted);"/>
+            </svg>
+        </a>
+
+
+        <div class="crayons-header--search js-search-form" id="header-search">
+            <form accept-charset="UTF-8" method="get" action="/search" role="search">
+                <div class="crayons-fields crayons-fields--horizontal">
+                    <div class="crayons-field flex-1 relative">
+                        <input class="crayons-header--search-input crayons-textfield js-search-input" type="text"
+                               id="nav-search" name="q" placeholder="Search..." autocomplete="off"/>
+                        <button type="submit" aria-label="Search"
+                                class="c-btn c-btn--icon-alone absolute inset-px left-auto mt-0 py-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 aria-hidden="true" class="crayons-icon">
+                                <title>Search</title>
+                                <path
+                                        d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z">
+                                </path>
+                            </svg>
+
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="flex items-center h-100 ml-auto">
+            <a class="c-link c-link--icon-alone c-link--block m:hidden mx-1" id="search-link" aria-label="Search"
+               href="/search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
+                     aria-labelledby="asd94djj9wbdkp9gomeksrzwnov8kbpj" class="crayons-icon">
+                    <title id="asd94djj9wbdkp9gomeksrzwnov8kbpj">Search</title>
+                    <path
+                            d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z">
+                    </path>
+                </svg>
+
+            </a>
+            {% if request.user.is_authenticated %}
+            <!--            POst joylash-->
+            <span class="hidden m:block">
+                    <a href="{% url 'login' %}" class="c-link c-link--block mr-2 whitespace-nowrap ml-auto"
+                       data-no-instant>
+                        Creat Post
+                    </a>
+                </span>
+
+            <span class="hidden m:block">
+                    <a href="{% url 'logout' %}" class="c-link c-link--block mr-2 whitespace-nowrap ml-auto"
+                       data-no-instant>
+                        Chiqib ketish
+                    </a>
+                </span>
+
+            {% else %}
+
+
+            <span class="hidden m:block">
+                    <a href="{% url 'login' %}" class="c-link c-link--block mr-2 whitespace-nowrap ml-auto"
+                       data-no-instant>
+                        Log in
+                    </a>
+                </span>
+
+            <a href="{% url 'signup' %}" class="c-cta c-cta--branded whitespace-nowrap mr-2" data-no-instant>
+                Create account
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</header>
+
+{% block content %}
+
+{% endblock %}
+
+
+<!--foooter-->
+<footer class="crayons-footer print-hidden">
+    <div id="footer-container" class="crayons-footer__container">
+        <p class="fs-s crayons-footer__description">
+            <a class="c-link c-link--branded fw-medium" aria-label="DEV Community Home" href="/">DEV
+                Community</a> — A constructive and inclusive social network for software developers. With you
+            every step of your journey.
+        </p>
+        <div class="fs-s">
+            <p>Built on <a class="c-link c-link--branded" target="_blank" rel="noopener"
+                           href="https://www.forem.com">Forem</a> — the <a target="_blank" rel="noopener"
+                                                                           class="c-link c-link--branded"
+                                                                           href="https://dev.to/t/opensource">open
+                source</a> software
+                that powers <a target="_blank" rel="noopener" class="c-link c-link--branded"
+                               href="https://dev.to">DEV</a> and other inclusive communities.</p>
+            <p>Made with love and <a target="_blank" rel="noopener" class="c-link c-link--branded"
+                                     href="https://dev.to/t/rails">Ruby on Rails</a>. DEV Community <span
+                    title="copyright">&copy;</span> 2016 - 2022.</p>
+        </div>
+        <a href="https://www.forem.com" target="_blank" rel="noopener"
+           class="c-link c-link c-link--block c-link--icon-alone self-center">
+            <svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    role="img" aria-labelledby="akzrv482h9bo8vulpde2fffet8j6tvt6"
+                    class="c-link__icon crayons-icon crayons-icon--default">
+                <title id="akzrv482h9bo8vulpde2fffet8j6tvt6">Forem logo</title>
+                <g clip-path="url(#clip0)" fill="#1AB3A6">
+                    <path
+                            d="M4.603 1.438a8.056 8.056 0 017.643 5.478 8.543 8.543 0 00-3.023 5.968H8.054C3.606 12.884 0 9.296 0 4.87V1.468a.03.03 0 01.03-.03h4.573zM23.97 6.515a.03.03 0 01.03.03v2.833c0 4.11-3.354 7.442-7.491 7.442h-2.881v5.726h-2.305V14.53l.022-1.145c.294-3.843 3.526-6.87 7.469-6.87h5.155z">
+                    </path>
+                </g>
+                <defs>
+                    <clipPath id="clip0">
+                        <path fill="#fff" d="M0 0h24v24H0z"></path>
+                    </clipPath>
+                </defs>
+            </svg>
+        </a>
+    </div>
+
+</footer>
+<div id="snack-zone"></div>
+
+<div id="global-signup-modal" class="authentication-modal hidden">
+    <div class="authentication-modal__container">
+        <figure class="authentication-modal__image-container">
+            <img class="authentication-modal__image"
+                 src="https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png"
+                 alt="DEV Community" loading="lazy"/>
+        </figure>
+        <div class="authentication-modal__content">
+            <p class="authentication-modal__description">
+                We&#39;re a place where coders share, stay up-to-date and grow their careers.
+            </p>
+        </div>
+        <div class="authentication-modal__actions">
+            <a href="/enter" class="crayons-btn" aria-label="Log in" data-no-instant>
+                Log in
+            </a>
+            <a href="/enter?state=new-user" class="crayons-btn crayons-btn--ghost-brand"
+               aria-label="Create new account" data-no-instant>
+                Create account
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="https://dev.to/packs/js/runtime~signupModalShortcuts-274ece3881c7b1a3e6dd.js"
+        defer="defer"></script>
+<script src="https://dev.to/packs/js/signupModalShortcuts-e70b74aa54662e15127d.chunk.js" defer="defer"></script>
+
+<div id="i18n-translations"
+     data-translations="{&quot;en&quot;:{&quot;core&quot;:{&quot;add_comment&quot;:&quot;Add comment&quot;,&quot;beta&quot;:&quot;beta&quot;,&quot;comment&quot;:&quot;Comment&quot;,&quot;copy_link&quot;:&quot;Copy link&quot;,&quot;edit_profile&quot;:&quot;Edit profile&quot;,&quot;follow&quot;:&quot;Follow&quot;,&quot;follow_back&quot;:&quot;Follow back&quot;,&quot;following&quot;:&quot;Following&quot;,&quot;like&quot;:&quot;Like&quot;,&quot;loading&quot;:&quot;loading...&quot;,&quot;reaction&quot;:&quot;Reaction&quot;,&quot;report_abuse&quot;:&quot;Report abuse&quot;,&quot;search&quot;:&quot;Search&quot;}}}">
+</div>
+</body>
+
+</html>
