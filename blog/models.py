@@ -16,20 +16,20 @@ from django.contrib.auth.models import User
 #         return self.name
 
 
-# class Blog(models.Model):
-#     title = models.CharField(max_length=255)
-#     # category = models.ForeignKey(Category, on_delete=models.PROTECT, null=True)
-#     photo = models.ImageField(upload_to="photos/%Y/%m/%d/", null=True, blank=True)
-#     # author = models.ForeignKey(User, on_delete=models.CASCADE)
-#     text = []
-#     # created_at = models.DateTimeField(auto_now_add=True)
-#     # updated_at = models.DateTimeField(auto_now=True)
-#
-#     class Meta:
-#         ordering = ['-created_at']
-#
-#     def __str__(self):
-#         return self.title
+class Blog(models.Model):
+    title = models.CharField(max_length=255)
+    # category = models.ForeignKey(Category, on_delete=models.PROTECT, null=True)
+    photo = models.ImageField(upload_to="photos/%Y/%m/%d/", null=True, blank=True)
+    # author = models.ForeignKey(User, on_delete=models.CASCADE)
+    # text = []
+    created_at = models.DateTimeField(auto_now_add=True)
+    # updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return self.title
 
 
 # class Comment(models.Model):

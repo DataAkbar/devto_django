@@ -97,15 +97,15 @@ def index(request):
 #
 #
 def registerUser(request):
-    # if request.user.is_authenticated:
-    #     return redirect('index')
-    # else:
-    #     form = UserCreationForm()
-    #     if request.method == "POST":
-    #         form = UserCreationForm(request.POST)
-    #         if form.is_valid():
-    #             form.save()
-    #             return redirect('login')
+    if request.user.is_authenticated:
+        return redirect('index')
+    else:
+        form = UserCreationForm()
+        if request.method == "POST":
+            form = UserCreationForm(request.POST)
+            if form.is_valid():
+                form.save()
+                return redirect('login')
 
     return render(request, 'registration/signup.html')
 #
@@ -129,4 +129,4 @@ def loginUser(request):
 
 def logoutUser(request):
     logout(request)
-    return redirect('login')
+    return redirect('index')
