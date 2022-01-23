@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 {% load static %}
+
 
 {% block title %} Satipoff Page {% endblock %}
 
@@ -102,7 +104,13 @@
                                 Sign up with Twitter
                             </button>
                         </form>
+                        <form method="post">{% csrf_token %}
+                            {{ form|crispy }}
+                            <button class="btn btn-success ml-2" type="submit">Kirish</button>
+                            <a class="btn btn-outline-danger" href="#" role="button">Kalit so'zni tiklash</a>
+                        </form>
                     </div>
+
                     <div class="registration__hr">
                             <span class="registration__hr-label">
                                 Already have an account? <a href="{% url 'login' %}">Log in</a>.

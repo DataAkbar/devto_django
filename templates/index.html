@@ -8,7 +8,7 @@
 <div class="hamburger">
     <div class="hamburger__content">
         <header class="hamburger__content__header">
-            <h2 class="fs-l fw-bold flex-1 break-word lh-tight">DEV Community</h2>
+            <h2 class="fs-l fw-bold flex-1 break-word lh-tight">THEN Community</h2>
 
             <button class="c-btn c-btn--icon-alone js-hamburger-trigger shrink-0" aria-label="Close">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
@@ -29,7 +29,7 @@
             <nav class="mb-4 " id="main-navigation" aria-label="DEV Community">
                 <ul class="default-navigation-links sidebar-navigation-links spec-sidebar-navigation-links">
                     <li>
-                        <a href="/" class="c-link c-link--block c-link--icon-left">
+                        <a href="{% url 'index' %}" class="c-link c-link--block c-link--icon-left">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24"
                                 role="img" aria-hidden="true" class="crayons-icon crayons-icon--default c-link__icon">
                                 <g class="nc-icon-wrapper">
@@ -921,10 +921,10 @@
                     <div class="crayons-card crayons-card--secondary p-3 crayons-sponsorship-widget" data-display-unit
                         data-id="36">
                         <p><a href="https://shop.dev.to/collections/2018-new-merch"><img
-                                    src="https://res.cloudinary.com/practicaldev/image/fetch/s--Th3frs95--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_350/https://thepracticaldev.s3.amazonaws.com/i/a7tz6hpmtwmgx2pe2ch2.jpg"
+                                    src="{% static 'img/myfoto.jpg' %}"
                                     width="1000" height="1000" loading="lazy"></a></p>
-                        <p><a href="https://shop.dev.to/collections/2018-new-merch"><br>
-                                <h2>DEV Up Your Style</h2>
+                        <p><a href="https://www.instagram.com/satipoff_dev"><br>
+                                <h2>THEN: satipoff</h2>
                                 <br>
                             </a></p>
                     </div>
@@ -944,18 +944,18 @@
 
 
             <main class="articles-list crayons-layout__content" id="main-content" data-follow-button-container="true">
-                <script>
-                    /**
-                     * This script corresponds to initializeOnboardingTaskCard() which will display the task card
-                     */
+<!--                <script>-->
+<!--                    /**-->
+<!--                     * This script corresponds to initializeOnboardingTaskCard() which will display the task card-->
+<!--                     */-->
 
-                    function closeTaskCard() {
-                        var taskCard = document.getElementsByClassName("onboarding-task-card")[0];
-                        taskCard.style.display = "none";
+<!--                    function closeTaskCard() {-->
+<!--                        var taskCard = document.getElementsByClassName("onboarding-task-card")[0];-->
+<!--                        taskCard.style.display = "none";-->
 
-                        localStorage.setItem('task-card-closed', 'yes');
-                    }
-                </script>
+<!--                        localStorage.setItem('task-card-closed', 'yes');-->
+<!--                    }-->
+<!--                </script>-->
                 <style>
                     .onboarding-task-card {
                         display: none;
