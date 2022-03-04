@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import (index, test, detail, add_post, category, edit_post, delete_post,
-                    search_post, registerUser, loginUser,
-                    logoutUser)
+from .views import (index, 
+                    test, detail, add_post, 
+                    category, edit_post, delete_post,
+                    search_post, registerUser, loginUser,logoutUser)
 
 
 urlpatterns = [

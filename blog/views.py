@@ -9,6 +9,7 @@ from django.db.models import Q
 from django.http import HttpResponse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+
 def test(request):
     return render(request, 'postuchun.html')
 
@@ -17,7 +18,7 @@ def index(request):
     posts = Blog.objects.all()
 
     # # paginator = Paginator(posts, 4)
-    # page = request.GET.get('page')
+    page = request.GET.get('page')
     # # try:
     # #     posts = paginator.page(page)
     # # except PageNotAnInteger:
